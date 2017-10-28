@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学员信息</title>
+	<link rel="stylesheet" href="./css/list.css">
+</head>
+<body>
+	<table>
+		<caption>学员信息</caption>
+		<tr>
+			<th>姓名</th>
+			<th>性别</th>
+			<th>年龄</th>
+			<th>手机号码</th>
+			<th>邮箱地址</th>
+			<th>所属学院</th>
+			<th>入学成绩</th>
+			<th>入学时间</th>
+			<th>毕业时间</th>
+			<th>操作</th>
+		</tr>
+		{{each list}}
+		<tr>
+			<th>{{$value.name}}</th>
+			<th>{{$value.sex}}</th>
+			<th>{{$value.age}}</th>
+			<th>{{$value.phone}}</th>
+			<th>{{$value.email}}</th>
+			<th>{{$value.subject}}</th>
+			<th>{{$value.score}}</th>
+			<th>{{$value.date_start}}</th>
+			<th>{{$value.date_end}}</th>
+			<th><a href="javascript:;">删除</a></th>
+		</tr>
+		{{/each}}
+	</table>
+	<script src="./js/jquery.min.js"></script>
+</body>
+</html>
